@@ -1,6 +1,17 @@
 # wa_clone_ui
 
-A new Flutter project.
+WhatsApp clone UI.
+
+<!-- ## Speedcode
+youtube -->
+
+## App UI
+
+<img src = "screenshots/ss (1).png" width=180>
+<img src = "screenshots/ss (2).png" width=180>
+<img src = "screenshots/ss (3).png" width=180>
+<img src = "screenshots/ss (4).png" width=180>
+<img src = "screenshots/ss (5).png" width=180>
 
 ## Honourable mentions
 
