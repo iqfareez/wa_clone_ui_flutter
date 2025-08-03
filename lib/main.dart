@@ -4,7 +4,7 @@ import 'package:wa_clone_ui/utils/wa_brand_colour.dart';
 
 import 'views/my_home_page.dart';
 
-List<CameraDescription> cameras;
+late List<CameraDescription> cameras;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

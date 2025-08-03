@@ -9,7 +9,7 @@ class MyCameraPreview extends StatefulWidget {
 }
 
 class _MyCameraPreviewState extends State<MyCameraPreview> {
-  CameraController controller;
+  late final CameraController controller;
 
   @override
   void initState() {
@@ -25,7 +25,7 @@ class _MyCameraPreviewState extends State<MyCameraPreview> {
 
   @override
   void dispose() {
-    controller?.dispose();
+    controller.dispose();
     super.dispose();
   }
 

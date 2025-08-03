@@ -7,7 +7,7 @@ import 'package:wa_clone_ui/views/story_page.dart';
 import 'chat_page.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
   @override
@@ -16,7 +16,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
-  TabController _tabController;
+  late final TabController _tabController;
   @override
   void initState() {
     super.initState();
@@ -105,25 +105,20 @@ class _MyHomePageState extends State<MyHomePage>
             onPressed: () {
               print('case 1');
             });
-        break;
       case 2:
         return FloatingActionButton(
             child: Icon(Icons.camera_alt),
             onPressed: () {
               print('case 2');
             });
-        break;
       case 3:
         return FloatingActionButton(
             child: Icon(Icons.call),
             onPressed: () {
               print('case 3');
             });
-        break;
       default:
-        //case 0
-        return null;
-        break;
+        return SizedBox.shrink();
     }
   }
 }

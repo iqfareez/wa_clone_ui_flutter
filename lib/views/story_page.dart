@@ -1,7 +1,5 @@
 import 'package:camera/camera.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:story_view/controller/story_controller.dart';
 import 'package:story_view/story_view.dart';
 import 'package:wa_clone_ui/mock%20data/chats_data.dart';
 import 'package:wa_clone_ui/utils/wa_brand_colour.dart';
@@ -15,8 +13,8 @@ class StoryPage extends StatefulWidget {
 }
 
 class _StoryPageState extends State<StoryPage> {
-  CameraController controller;
-  StoryController storyController;
+  late final CameraController controller;
+  late final StoryController storyController;
 
   ChatData _chatData = ChatData();
   @override
