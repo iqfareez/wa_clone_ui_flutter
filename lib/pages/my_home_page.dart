@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:wa_clone_ui/utils/wa_brand_colour.dart';
-import 'package:wa_clone_ui/views/calls_page.dart';
-import 'package:wa_clone_ui/views/camera_preview.dart';
-import 'package:wa_clone_ui/views/story_page.dart';
 
-import 'chat_page.dart';
+import '../utils/wa_brand_colour.dart';
+import 'calls_page.dart/calls_page.dart';
+import 'camera_page/camera_preview.dart';
+import 'chat_page/chat_page.dart';
+import 'status_page/status_page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -39,7 +39,12 @@ class _MyHomePageState extends State<MyHomePage>
           headerSliverBuilder: (context, innerBoxIsScrolled) {
             return [
               SliverAppBar(
-                title: Text(widget.title),
+                title: Text(
+                  widget.title,
+                  style: TextStyle(
+                      color: WaBrandColour.tealGreenLighter,
+                      fontWeight: FontWeight.bold),
+                ),
                 actions: [
                   IconButton(
                       icon: Icon(Icons.more_vert),
@@ -76,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage>
               ChatPage(),
               Container(
                 color: WaBrandColour.white,
-                child: StoryPage(),
+                child: StatusPage(),
               ),
               Container(
                 color: WaBrandColour.white,

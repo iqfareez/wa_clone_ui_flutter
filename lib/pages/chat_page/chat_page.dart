@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wa_clone_ui/mock%20data/chats_data.dart';
+import '../../mock%20data/chats_data.dart';
 
 class ChatPage extends StatelessWidget {
   final ChatData _chatData = ChatData();

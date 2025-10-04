@@ -1,20 +1,20 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:story_view/story_view.dart';
-import 'package:wa_clone_ui/mock%20data/chats_data.dart';
-import 'package:wa_clone_ui/utils/wa_brand_colour.dart';
-import 'package:wa_clone_ui/views/camera_preview.dart';
 
-import '../main.dart';
+import '../../main.dart';
+import '../../mock%20data/chats_data.dart';
+import '../../utils/wa_brand_colour.dart';
+import '../camera_page/camera_preview.dart';
 
-class StoryPage extends StatefulWidget {
-  const StoryPage({Key? key}) : super(key: key);
+class StatusPage extends StatefulWidget {
+  const StatusPage({Key? key}) : super(key: key);
 
   @override
-  State<StoryPage> createState() => _StoryPageState();
+  State<StatusPage> createState() => _StatusPageState();
 }
 
-class _StoryPageState extends State<StoryPage> {
+class _StatusPageState extends State<StatusPage> {
   late final CameraController controller;
   late final StoryController storyController;
 

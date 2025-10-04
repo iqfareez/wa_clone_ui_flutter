@@ -1,7 +1,7 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
-import '../main.dart';
+import '../../main.dart';
 
 class MyCameraPreview extends StatefulWidget {
   const MyCameraPreview({Key? key}) : super(key: key);
