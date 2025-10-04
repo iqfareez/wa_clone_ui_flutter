@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:story_view/story_view.dart';
 
 import '../../main.dart';
-import '../../mock%20data/chats_data.dart';
+import '../../utils/mock_chats_data.dart';
 import '../../utils/wa_brand_colour.dart';
 import '../camera_page/camera_preview.dart';
 
@@ -18,7 +18,6 @@ class _StatusPageState extends State<StatusPage> {
   late final CameraController controller;
   late final StoryController storyController;
 
-  final ChatData _chatData = ChatData();
   @override
   void initState() {
     super.initState();
@@ -78,8 +77,8 @@ class _StatusPageState extends State<StatusPage> {
             physics: NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return ListTile(
-                title: Text(_chatData.name[index + 2]),
-                subtitle: Text(_chatData.statusDate[index]),
+                title: Text(MockChatData.name[index + 2]),
+                subtitle: Text(MockChatData.statusDate[index]),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -90,8 +89,9 @@ class _StatusPageState extends State<StatusPage> {
                             storyItems: [
                               StoryItem.text(
                                   textStyle: TextStyle(fontSize: 20),
-                                  title: _chatData.randomStoriesText[index],
-                                  backgroundColor: _chatData.statusColor[index])
+                                  title: MockChatData.randomStoriesText[index],
+                                  backgroundColor:
+                                      MockChatData.statusColor[index])
                             ],
                             controller: storyController,
                             onComplete: () {

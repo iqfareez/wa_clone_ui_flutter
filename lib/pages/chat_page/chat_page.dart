@@ -1,33 +1,62 @@
 import 'package:flutter/material.dart';
-import '../../mock%20data/chats_data.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
-class ChatPage extends StatelessWidget {
-  final ChatData _chatData = ChatData();
+import '../../utils/mock_chats_data.dart';
+import 'components/chat_chip.dart';
 
-  ChatPage({Key? key}) : super(key: key);
+class ChatPage extends StatefulWidget {
+  const ChatPage({Key? key}) : super(key: key);
+
+  @override
+  State<ChatPage> createState() => _ChatPageState();
+}
+
+class _ChatPageState extends State<ChatPage> {
+  int selectedChip = 0;
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      separatorBuilder: (context, index) {
-        return Divider(
-          indent: 40,
-          endIndent: 5,
-        );
-      },
+    return ListView.builder(
       itemCount: 10,
       itemBuilder: (context, index) {
+        if (index == 0) {
+          return SizedBox(
+            height: 70,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: MockChatData.messageCategories.length,
+              shrinkWrap: true,
+              // padding for beginning and end
+              padding: EdgeInsets.all(8),
+              itemBuilder: (context, index) {
+                return ChatChip(
+                  selected: index == selectedChip,
+                  label: MockChatData.messageCategories[index],
+                  onPressed: () {
+                    setState(() {
+                      selectedChip = index;
+                    });
+                  },
+                );
+              },
+            ),
+          );
+        }
         return ListTile(
+          onTap: () {
+            Fluttertoast.showToast(
+                msg: 'Chat with ${MockChatData.name[index]} tapped');
+          },
           leading: CircleAvatar(
             radius: 25,
-            backgroundImage: AssetImage(_chatData.profilePicturePath[index]),
+            backgroundImage: AssetImage(MockChatData.profilePicturePath[index]),
           ),
-          title: Text(_chatData.name[index]),
+          title: Text(MockChatData.name[index]),
           subtitle: Text(
-            _chatData.randomChatText[index],
+            MockChatData.randomChatText[index],
             overflow: TextOverflow.ellipsis,
           ),
           trailing: Column(
-            children: [Text(_chatData.randomTime[index])],
+            children: [Text(MockChatData.randomTime[index])],
           ),
         );
       },

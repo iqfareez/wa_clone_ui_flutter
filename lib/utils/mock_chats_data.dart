@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 
-class ChatData {
-  List<String> name = [
-    'intan',
-    'mickey',
-    'kitty ♥',
-    'tom',
-    'jerry',
-    'cucen',
-    'mewo',
-    'oyen',
-    'olaf 🐱',
-    'tam',
-    'tih',
+class MockChatData {
+  MockChatData._();
+  static List<String> name = [
+    'Aiman',
+    'Siti Nur',
+    'Farhan',
+    'Nadia',
+    'Hakim',
+    'Aisyah',
+    'Zul',
+    'Syafiq',
+    'Amira',
+    'Fatin',
+    'Azlan',
   ];
 
-  List<String> profilePicturePath = [
+  static List<String> profilePicturePath = [
     'images/dp/dp (1).jpg',
     'images/dp/dp (2).jpg',
     'images/dp/dp (3).jpg',
@@ -29,23 +30,23 @@ class ChatData {
     'images/dp/dp (11).jpg',
   ];
 
-  List<String> randomChatText = [
-    'then dried tales. result construction rocket',
-    'funny helpful are. nodded cover married',
-    'among think age. burn doing drive',
-    'who completely one. wealth neighbor few',
-    'motion fell rapidly. purple mouse setting',
-    'Terpesonaa 💕💕💕',
-    'future dry animal. bit pile great',
-    'shore enjoy acres. gather enemy cause',
-    'them discover noted. national family busy',
-    'aware remember alphabet. cheese victory found',
-    'fallen famous attack. hair shot yes',
-    'fresh name giant. brown husband expression',
-    'imagine trap whale. repeat balance right',
+  static List<String> randomChatText = [
+    'Dah makan belum?',
+    'Jom lepak petang ni!',
+    'Haha, kelakar la kau ni 😂',
+    'Nanti aku share gambar tu',
+    'Serius lah, betul ke ni?',
+    'Terbaik bro! 👍',
+    'Esok cuti kan?',
+    'Mana kau pergi tadi?',
+    'Sorry, lambat reply. Tengah busy sikit',
+    'Tak sabar nak jumpa korang!',
+    'Boleh tolong aku kejap?',
+    'Adoi, penat gila harini',
+    'Let\'s go makan ayam goreng!',
   ];
 
-  List<String> statusImagesPath = [
+  static List<String> statusImagesPath = [
     'images/statuses/status (1).jpg',
     'images/statuses/status (2).jpg',
     'images/statuses/status (3).jpg',
@@ -53,7 +54,7 @@ class ChatData {
     'images/statuses/status (5).jpg',
   ];
 
-  List<String> statusDate = [
+  static List<String> statusDate = [
     'Just now',
     '38 minutes ago',
     'Today 8:41 am',
@@ -61,7 +62,7 @@ class ChatData {
     'Yesterday 4:51 am',
   ];
 
-  List<String> randomStoriesText = [
+  static List<String> randomStoriesText = [
     'Maleh aku',
     '💔',
     'harini rempat ikan maple',
@@ -69,7 +70,7 @@ class ChatData {
     '🐱🐱',
   ];
 
-  List<Color> statusColor = [
+  static List<Color> statusColor = [
     Color(0xFF736769),
     Color(0xFF792139),
     Color(0xFFA52C71),
@@ -77,7 +78,7 @@ class ChatData {
     Color(0xFFFF7B6C),
   ];
 
-  List<String> randomTime = [
+  static List<String> randomTime = [
     '5:22 pm',
     '3:25 pm',
     '3:54 pm',
@@ -89,5 +90,15 @@ class ChatData {
     '8:19 pm',
     '4:47 pm',
     '2:52 pm',
+  ];
+
+  static List<String> messageCategories = [
+    'All',
+    'Unread',
+    'Personal',
+    'Work',
+    'Groups',
+    'Broadcasts',
+    'Calls',
   ];
 }
