@@ -3,6 +3,8 @@ import 'package:wa_clone_ui/mock%20data/chats_data.dart';
 
 class ChatPage extends StatelessWidget {
   final ChatData _chatData = ChatData();
+
+  ChatPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return ListView.separated(

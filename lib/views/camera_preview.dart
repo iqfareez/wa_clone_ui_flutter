@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import '../main.dart';
 
 class MyCameraPreview extends StatefulWidget {
+  const MyCameraPreview({Key? key}) : super(key: key);
+
   @override
-  _MyCameraPreviewState createState() => _MyCameraPreviewState();
+  State<MyCameraPreview> createState() => _MyCameraPreviewState();
 }
 
 class _MyCameraPreviewState extends State<MyCameraPreview> {

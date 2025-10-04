@@ -8,15 +8,17 @@ import 'package:wa_clone_ui/views/camera_preview.dart';
 import '../main.dart';
 
 class StoryPage extends StatefulWidget {
+  const StoryPage({Key? key}) : super(key: key);
+
   @override
-  _StoryPageState createState() => _StoryPageState();
+  State<StoryPage> createState() => _StoryPageState();
 }
 
 class _StoryPageState extends State<StoryPage> {
   late final CameraController controller;
   late final StoryController storyController;
 
-  ChatData _chatData = ChatData();
+  final ChatData _chatData = ChatData();
   @override
   void initState() {
     super.initState();

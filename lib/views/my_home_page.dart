@@ -7,11 +7,11 @@ import 'package:wa_clone_ui/views/story_page.dart';
 import 'chat_page.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage>
@@ -73,9 +73,7 @@ class _MyHomePageState extends State<MyHomePage>
             controller: _tabController,
             children: [
               MyCameraPreview(),
-              Container(
-                child: ChatPage(),
-              ),
+              ChatPage(),
               Container(
                 color: WaBrandColour.white,
                 child: StoryPage(),
